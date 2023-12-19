@@ -5,6 +5,22 @@ import os
 import sys
 import numpy as np
 pd.set_option('display.max_columns', None)
+
+#%%
+def limpiar_dataframe(df):
+    """
+    Cambia los nombres de las columnas a minusculas
+    parametros:
+    dataframe del que sacamos las columnas
+    diccionario_columnas:Diccionario que mapea nombres de
+    return:
+    dataframe modificado
+    """
+    df.columns = map(str.lower, df.columns)
+    df.columns
+
+    return df
+
 #%%
 # una vez que tengamos nuestro DataFrame preparado con todas las columnas que queremos vamos a crear una función que no haga una exploración inicial del conjunto de datos
 def exploracion_dataframe(dataframe):
